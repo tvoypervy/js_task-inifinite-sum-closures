@@ -6,7 +6,7 @@
 function makeInfinityAdder() {
   let sum = 0;
 
-  return function adder(num) {
+  return function makeAdder(num) {
     if (num === undefined) {
       const result = sum;
 
@@ -16,7 +16,7 @@ function makeInfinityAdder() {
     }
     sum += num;
 
-    return adder;
+    return makeAdder;
   };
 }
 
